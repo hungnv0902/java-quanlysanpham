@@ -5,11 +5,11 @@ public class ProductServiceImpl implements ProductService {
     private static Map<Integer, Product> products;
     static {
         products = new HashMap<>();
-        products.put(1, new Product(1, "Iphone", "Dien thoai", 800, true,"/home/sysadmin/Downloads/anh1.jpg"));
-        products.put(2, new Product(2, "Nokia", "Dien thoai", 500, false,"a"));
-        products.put(3, new Product(3, "Samsung Galaxy", "Dien thoai", 600, true,"a"));
-        products.put(4, new Product(4, "Xiaomi", "Dien thoai", 400, true,"a"));
-        products.put(5, new Product(5, "Sony", "Tivi", 1500, true,"a"));
+        products.put(1, new Product(1, "Iphone", "Dien thoai", 800, true,"cho1.jpeg"));
+        products.put(2, new Product(2, "Nokia", "Dien thoai", 500, false,"cho2.jpeg"));
+        products.put(3, new Product(3, "Samsung Galaxy", "Dien thoai", 600, true,"cho3.jpeg"));
+        products.put(4, new Product(4, "Xiaomi", "Dien thoai", 400, true,"anh1.jpg"));
+        products.put(5, new Product(5, "Sony", "Tivi", 1500, true,"cho2.jpeg"));
     }
     @Override
     public List<Product> findAll() {

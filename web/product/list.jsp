@@ -51,9 +51,9 @@
                 <td>${product.getDescreption()}</td>
                 <td>${product.getPrice()}</td>
                 <td>${product.isStatus()}</td>
-                <td><a href="/product?action=edit&id=${product.getId()}">edit</a></td>
-                <td><a href="/product?action=delete&id=${product.getId()}">delete</a></td>
-                <td><img src="${product.getAvatar()}"></td>
+                <td><a href="/product?action=edit&id=${product.getId()}">Edit</a></td>
+                <td><a href="/product?action=delete&id=${product.getId()}">Delete</a></td>
+                <td><img src="<%request.getServletContext().getRealPath("");%>/uploadDir/${product.getAvatar()}" id="image"></td>
             </tr>
         </c:forEach>
     </table>

@@ -34,7 +34,7 @@
     </tr>
     <tr>
         <td>Avatar: </td>
-        <td>${requestScope["product"].getAvatar()}</td>
+        <td><img src="<%request.getServletContext().getRealPath("");%>/uploadDir/${product.getAvatar()}" id="image"></td>
     </tr>
 </table>
 </body>

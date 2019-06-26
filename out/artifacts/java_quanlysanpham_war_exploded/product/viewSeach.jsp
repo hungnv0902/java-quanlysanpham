@@ -32,6 +32,10 @@
         <td>Status: </td>
         <td>${requestScope["product"].isStatus()}</td>
     </tr>
+    <tr>
+        <td>Avatar: </td>
+        <td><img src="<%request.getServletContext().getRealPath("");%>/uploadDir/${product.getAvatar()}" id="image"></td>
+    </tr>
 </table>
 </body>
 </html>

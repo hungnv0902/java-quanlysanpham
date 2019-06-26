@@ -7,12 +7,11 @@ title {
 }
 
 table {
+    padding-top: 0px;
     text-align: center;
     border-collapse: collapse;
 }
-
-#formSeach {
-    width: 200px;
-    height: 300px;
-    color: blueviolet;
+#image {
+    width: 40px;
+    height: 40px;
 }

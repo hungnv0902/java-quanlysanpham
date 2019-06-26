@@ -38,7 +38,7 @@
             </tr>
             <tr>
                 <td>Avatar: </td>
-                <td>${requestScope["product"].getAvatar()}</td>
+                <td><td><img src="<%request.getServletContext().getRealPath("");%>/uploadDir/${product.getAvatar()}" id="image"></td></td>
             </tr>
             <tr>
                 <td><input type="submit" value="Delete product"></td>

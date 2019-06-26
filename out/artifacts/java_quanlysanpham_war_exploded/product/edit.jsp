@@ -20,7 +20,7 @@
 <p>
     <a href="/product">Back to product list</a>
 </p>
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     <fieldset>
         <legend>Product information</legend>
         <table>
@@ -42,7 +42,7 @@
             </tr>
             <tr>
                 <td>Avatar: </td>
-                <td><input type="file" name="avatar" id="avatar" value="${requestScope["product"].getAvatar()}"></td>
+                <td><input type="file" name="avatar" id="avatar" ></td>
             </tr>
             <tr>
                 <td></td>
