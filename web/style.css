@@ -10,3 +10,9 @@ table {
     text-align: center;
     border-collapse: collapse;
 }
+
+#formSeach {
+    width: 200px;
+    height: 300px;
+    color: blueviolet;
+}

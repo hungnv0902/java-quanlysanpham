@@ -18,7 +18,22 @@
     <p>
         <a href="/product?action=create">Create new product</a>
         <br>
-        <a href="/product?action=seach">Seach product</a>
+    <form method="post" action="/product?action=seach" id="formSeach">
+        <fieldset>
+            <legend>Seach</legend>
+            <table>
+                <tr>
+                    <td>Name: </td>
+                    <td><input type="text" name="nameSeach" id="nameSeach"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Seach product"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+
     </p>
     <table border="1">
         <tr>

@@ -41,6 +41,10 @@
                 <td><input type="text" name="status" id="status" value="${requestScope["product"].isStatus()}"></td>
             </tr>
             <tr>
+                <td>Avatar: </td>
+                <td><input type="file" name="avatar" id="avatar" value="${requestScope["product"].getAvatar()}"></td>
+            </tr>
+            <tr>
                 <td></td>
                 <td><input type="submit" value="Update product"></td>
             </tr>

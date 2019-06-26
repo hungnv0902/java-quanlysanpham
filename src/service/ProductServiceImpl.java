@@ -1,10 +1,6 @@
 package service;
-
 import model.Product;
-
-import java.beans.Customizer;
 import java.util.*;
-
 public class ProductServiceImpl implements ProductService {
     private static Map<Integer, Product> products;
     static {

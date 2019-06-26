@@ -1,5 +1,7 @@
 package model;
 
+import javax.servlet.http.Part;
+
 public class Product {
     private int id;
     private String name;

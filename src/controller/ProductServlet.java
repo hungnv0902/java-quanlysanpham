@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 import java.io.IOException;
 import java.util.List;
 
@@ -81,7 +82,7 @@ import java.util.List;
         }
     }
 
-    private void updateProduct(HttpServletRequest request, HttpServletResponse response) {
+    private void updateProduct(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
         String descreption = request.getParameter("descreption");
@@ -97,6 +98,7 @@ import java.util.List;
             product.setDescreption(descreption);
             product.setPrice(price);
             product.setStatus(status);
+            product.setAvatar(avatar);
             this.productService.update(id, product);
             request.setAttribute("customer", product);
             request.setAttribute("message", "product information was updated");
@@ -111,7 +113,7 @@ import java.util.List;
         }
     }
 
-    private void createProduct(HttpServletRequest request, HttpServletResponse response) {
+    private void createProduct(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String name = request.getParameter("name");
         String descreption = request.getParameter("descreption");
         float price = Float.parseFloat(request.getParameter("price"));
@@ -150,25 +152,12 @@ import java.util.List;
             case "view":
                 viewProduct(request, response);
                 break;
-            case "seach":
-                seachProductForm(request, response);
-                break;
             default:
                 listProducts(request, response);
                 break;
         }
     }
 
-    private void seachProductForm(HttpServletRequest request, HttpServletResponse response) {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("product/seach.jsp");
-        try {
-            dispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     private void viewProduct(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
